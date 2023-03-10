@@ -11,6 +11,7 @@ import streamlit as st
 import datetime
 from bokeh.plotting import figure
 from bokeh.models import HoverTool
+import PIL
 
 
 st.set_page_config(page_title='Ground Water Level Prediction',layout="wide")
