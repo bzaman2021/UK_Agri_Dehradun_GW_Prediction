@@ -60,7 +60,7 @@ with tab1:
     
     q = figure(title="Subset Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                width=500, height=400)
-    q.line(ram_subset_pred['Date'], ram_subset_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.4)
+    q.line(ram_subset_pred['Date'], ram_subset_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.7,line_dash="dashdot")
     q.line(ram_subset_pred['Date'], ram_subset_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
     q.add_tools(HoverTool(tooltips=
         [
@@ -78,7 +78,7 @@ with tab1:
     with ch1:
         p = figure(title="Test Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                    height=500)
-        p.line(ram_test_pred['Date'], ram_test_pred['Actual'], legend_label="Actual", color="blue", line_width=5,alpha=0.4)
+        p.line(ram_test_pred['Date'], ram_test_pred['Actual'], legend_label="Actual", color="blue", line_width=5,alpha=0.7,line_dash="dashdot")
         p.line(ram_test_pred['Date'], ram_test_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
         p.add_tools(HoverTool(tooltips=
             [
@@ -93,7 +93,7 @@ with tab1:
     with ch2:    
         z = figure(title="Train Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                    height=500)
-        z.line(ram_train_pred['Date'], ram_train_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.4)
+        z.line(ram_train_pred['Date'], ram_train_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.7,line_dash="dashdot")
         z.line(ram_train_pred['Date'], ram_train_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
         z.add_tools(HoverTool(tooltips=
             [
@@ -141,7 +141,7 @@ with tab2:
     st.markdown("<br></br>",unsafe_allow_html=True)
     
     start_date=st.date_input("Select the date from which the predictions will be plotted:",
-                             value=datetime.date(year=2019,month=2,day=18))
+                             value=datetime.date(year=2019,month=5,day=6))
     num_days=st.number_input("Type the number of days for which the prediction will be plotted:",
                              value=50,step=10)
     ovr_pred_df.set_index("Date",inplace=True)
@@ -152,7 +152,7 @@ with tab2:
     
     q = figure(title="Subset Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                width=500, height=400)
-    q.line(ovr_subset_pred['Date'], ovr_subset_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.4)
+    q.line(ovr_subset_pred['Date'], ovr_subset_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.7,line_dash="dashdot")
     q.line(ovr_subset_pred['Date'], ovr_subset_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
     q.add_tools(HoverTool(tooltips=
         [
@@ -168,7 +168,7 @@ with tab2:
     with ch3:
         p = figure(title="Test Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                    width=500, height=500)
-        p.line(ovr_test_pred['Date'],ovr_test_pred['Actual'], legend_label="Actual", color="blue", line_width=5,alpha=0.4)
+        p.line(ovr_test_pred['Date'],ovr_test_pred['Actual'], legend_label="Actual", color="blue", line_width=5,alpha=0.7,line_dash="dashdot")
         p.line(ovr_test_pred['Date'], ovr_test_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
         p.add_tools(HoverTool(tooltips=
             [
@@ -184,7 +184,7 @@ with tab2:
     with ch4:
         z = figure(title="Train Actual vs Predicted GW Level", x_axis_label="Date", y_axis_label="GW_level",x_axis_type="datetime",
                    width=500, height=500)
-        z.line(ovr_train_pred['Date'], ovr_train_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.4)
+        z.line(ovr_train_pred['Date'], ovr_train_pred['Actual'], legend_label="Actual", color="blue",line_width=5,alpha=0.7,line_dash="dashdot")
         z.line(ovr_train_pred['Date'], ovr_train_pred['Predicted'], legend_label="Predicted", color="red", line_width=1)
         z.add_tools(HoverTool(tooltips=
             [
