@@ -1,8 +1,7 @@
-streamlit
-numpy
-pandas
+streamlit==1.24.0
+numpy==1.25.0
+pandas==2.0.3
 datetime
 bokeh==2.4.3
 openpyxl
 Pillow
-pickle
